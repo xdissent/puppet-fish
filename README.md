@@ -30,3 +30,7 @@ Set `GITHUB_API_TOKEN` in your shell with a [Github oAuth Token](https://help.gi
 
 Then write some code. Run `script/cibuild` to test it. Check the `script`
 directory for other useful tools.
+
+## Credits
+
+This module is heavily inspired by the [zsh module](http://github.com/boxen/puppet-zsh).
