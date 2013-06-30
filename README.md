@@ -3,7 +3,7 @@
 Installs the [fish shell](http://fishshell.com/), configures it as a valid
 shell for the OS, and optionally sets it as your default shell.
 
-[![Build Status](https://travis-ci.org/dgoodlad/puppet-fish.png?branch=master)](https://travis-ci.org/dgoodlad/puppet-fish)
+[![Build Status](https://travis-ci.org/boxen/puppet-fish.png?branch=master)](https://travis-ci.org/boxen/puppet-fish)
 
 ## Usage
 
