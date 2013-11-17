@@ -39,8 +39,7 @@ class fish (
 
   file { ["/Users/${::boxen_user}/.config", "/Users/${::boxen_user}/.config/fish"]:
     mode => 0700,
-    ensure => directory,
-    recurse => true
+    ensure => directory
   }
 
   exec { 'create a minimal fish config':
