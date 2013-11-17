@@ -34,4 +34,17 @@ class fish (
     content => template('fish/env.fish.erb'),
     mode    => '0755',
   }
+
+  $fish_config = "/Users/${::boxen_user}/.config/fish/fish.config"
+
+  file { ["/Users/${::boxen_user}/.config", "/Users/${::boxen_user}/.config/fish"]:
+    mode => 0700,
+    ensure => directory,
+    recurse => true
+  }
+
+  exec { 'create a minimal fish config':
+    command => "echo '. ${boxen::config::home}/env.fish' > ${fish_config}",
+    creates => $fish_config
+  }
 }
