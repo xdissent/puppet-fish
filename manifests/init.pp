@@ -42,8 +42,9 @@ class fish (
     ensure => directory
   }
 
-  exec { 'create a minimal fish config':
-    command => "echo '. ${boxen::config::home}/env.fish' > ${fish_config}",
-    creates => $fish_config
+  file { $fish_config:
+    content => ". ${boxen::config::home}/env.fish",
+    require => File["/Users/${::boxen_user}/.config/fish"],
+    unless => "test -f ${fish_config}"
   }
 }
