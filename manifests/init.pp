@@ -45,6 +45,6 @@ class fish (
   file { $fish_config:
     content => ". ${boxen::config::home}/env.fish",
     require => File["/Users/${::boxen_user}/.config/fish"],
-    unless => "test -f ${fish_config}"
+    replace => false
   }
 }
