@@ -35,7 +35,7 @@ class fish (
     mode    => '0755',
   }
 
-  $fish_config = "/Users/${::boxen_user}/.config/fish/fish.config"
+  $fish_config = "/Users/${::boxen_user}/.config/fish/config.fish"
 
   file { ["/Users/${::boxen_user}/.config", "/Users/${::boxen_user}/.config/fish"]:
     mode => 0700,
