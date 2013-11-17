@@ -29,4 +29,9 @@ class fish (
       require => File_line['add fish to /etc/shells'],
     }
   }
+
+  file { "${boxen::config::home}/env.fish":
+    content => template('fish/env.fish.erb'),
+    mode    => '0755',
+  }
 }
